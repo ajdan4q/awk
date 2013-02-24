@@ -1,0 +1,2 @@
+awk 'NR==FNR{a[$1","$2","$3]}
+     NR>FNR{b=substr($4,3);if($3","b","$NF in a)print}' file1 file2

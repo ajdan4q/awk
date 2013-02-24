@@ -1,0 +1,1 @@
+awk 'BEGIN{FS="[ |,]";OFS=","}NR<=FNR{a[$2]=$1}NR>FNR{print $1,$2,a[$2]}' a b
